@@ -1,0 +1,36 @@
+media:
+  input: images
+  output: /images
+
+content:
+  - name: posts
+    label: Aktualności
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, published]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+        required: true
+      - name: date
+        label: Data publikacji
+        type: date
+        required: true
+      - name: description
+        label: Krótki opis (pokazuje się na liście notek i w Google)
+        type: text
+      - name: published
+        label: Opublikowana
+        type: boolean
+        default: true
+      - name: body
+        label: Treść
+        type: rich-text
