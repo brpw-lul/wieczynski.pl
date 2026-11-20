@@ -1,0 +1,22 @@
+title: Biuro Rachunkowe Patryk Wieczyński
+description: KPiR, ryczałt, pełna księgowość spółek, kadry i płace, VAT i KSeF. Lulkowo k. Torunia oraz obsługa zdalna w całej Polsce.
+url: "https://wieczynski.pl"
+baseurl: ""
+lang: pl
+timezone: Europe/Warsaw
+
+markdown: kramdown
+permalink: /aktualnosci/:year/:month/:title/
+
+plugins:
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md

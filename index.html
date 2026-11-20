@@ -1,49 +1,6 @@
-<!doctype html>
-<html lang="pl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Biuro Rachunkowe Patryk Wieczyński | Księgowość Toruń i online</title>
-<meta name="description" content="Biuro Rachunkowe Patryk Wieczyński – KPiR, ryczałt, pełna księgowość spółek, kadry i płace, VAT i KSeF. Lulkowo k. Torunia oraz obsługa zdalna w całej Polsce.">
-<meta property="og:title" content="Biuro Rachunkowe Patryk Wieczyński">
-<meta property="og:description" content="Księgowość dla firm z Torunia i okolic oraz obsługa zdalna w całej Polsce.">
-<meta property="og:image" content="logo.png">
-<meta name="theme-color" content="#0b2a5c">
-<link rel="icon" href="logo.png">
-<link rel="stylesheet" href="style.css">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"AccountingService",
-  "name":"Biuro Rachunkowe Patryk Wieczyński",
-  "url":"https://wieczynski.pl",
-  "logo":"https://wieczynski.pl/logo.png",
-  "telephone":"+48799782411",
-  "email":"biuro@wieczynski.pl",
-  "taxID":"8792652342",
-  "address":{"@type":"PostalAddress","streetAddress":"Lulkowo 47","postalCode":"87-148","addressLocality":"Łysomice","addressCountry":"PL"},
-  "areaServed":["Toruń","Polska"]
-}
-</script>
-</head>
-<body>
-
-<header>
-  <div class="wrap nav">
-    <a href="#" class="brand">
-      <img src="logo.png" alt="Logo Biura Rachunkowego Patryk Wieczyński">
-      <span>Patryk Wieczyński<small>Biuro Rachunkowe</small></span>
-    </a>
-    <nav class="nav-links">
-      <a href="#oferta">Oferta</a>
-      <a href="#o-mnie">O mnie</a>
-      <a href="#wspolpraca">Współpraca</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-    <a href="tel:+48799782411" class="nav-cta">799 782 411</a>
-  </div>
-</header>
-
+---
+layout: default
+---
 <main>
   <div class="hero">
     <div class="wrap">
@@ -60,7 +17,7 @@
         </div>
       </div>
       <div class="logo-card">
-        <img src="logo.png" alt="Biuro Rachunkowe Patryk Wieczyński">
+        <img src="{{ '/logo.png' | relative_url }}" alt="Biuro Rachunkowe Patryk Wieczyński">
       </div>
     </div>
   </div>
@@ -150,6 +107,27 @@
     </div>
   </section>
 
+  {% if site.posts.size > 0 %}
+  <section id="aktualnosci" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Aktualności</p>
+        <h2>Najnowsze notki</h2>
+      </div>
+      <div class="posts">
+        {% for post in site.posts limit:3 %}
+        <a href="{{ post.url | relative_url }}" class="post-card">
+          <span class="post-date">{{ post.date | date: "%d.%m.%Y" }}</span>
+          <h3>{{ post.title }}</h3>
+          <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | truncatewords: 25 }}{% endif %}</p>
+          <span class="more">Czytaj dalej →</span>
+        </a>
+        {% endfor %}
+      </div>
+      <p class="note"><a href="{{ '/aktualnosci/' | relative_url }}">Zobacz wszystkie aktualności →</a></p>
+    </div>
+  </section>
+
   <section id="kontakt" style="padding-top:0">
     <div class="wrap">
       <div class="section-head">
@@ -183,14 +161,3 @@
     </div>
   </section>
 </main>
-
-<footer>
-  <div class="wrap foot">
-    <span>© <span id="y">2026</span> Biuro Rachunkowe Patryk Wieczyński · Lulkowo 47, 87-148 Łysomice · NIP 879-265-23-42</span>
-    <span><a href="mailto:biuro@wieczynski.pl">biuro@wieczynski.pl</a> · <a href="polityka-prywatnosci.html">Polityka prywatności</a></span>
-  </div>
-</footer>
-
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-</body>
-</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Księgowość Toruń i online{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | escape }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | escape }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:image" content="{{ '/logo.png' | absolute_url }}">
+<meta name="theme-color" content="#0b2a5c">
+<link rel="icon" href="{{ '/logo.png' | relative_url }}">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AccountingService",
+  "name":"Biuro Rachunkowe Patryk Wieczyński",
+  "url":"https://wieczynski.pl",
+  "logo":"https://wieczynski.pl/logo.png",
+  "telephone":"+48799782411",
+  "email":"biuro@wieczynski.pl",
+  "taxID":"8792652342",
+  "address":{"@type":"PostalAddress","streetAddress":"Lulkowo 47","postalCode":"87-148","addressLocality":"Łysomice","addressCountry":"PL"},
+  "areaServed":["Toruń","Polska"]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="{{ '/' | relative_url }}" class="brand">
+      <img src="{{ '/logo.png' | relative_url }}" alt="Logo Biura Rachunkowego Patryk Wieczyński">
+      <span>Patryk Wieczyński<small>Biuro Rachunkowe</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="{{ '/#oferta' | relative_url }}">Oferta</a>
+      <a href="{{ '/#o-mnie' | relative_url }}">O mnie</a>
+      <a href="{{ '/aktualnosci/' | relative_url }}">Aktualności</a>
+      <a href="{{ '/#kontakt' | relative_url }}">Kontakt</a>
+    </nav>
+    <a href="tel:+48799782411" class="nav-cta">799 782 411</a>
+  </div>
+</header>
+
+{{ content }}
+
+<footer>
+  <div class="wrap foot">
+    <span>© {{ 'now' | date: "%Y" }} Biuro Rachunkowe Patryk Wieczyński · Lulkowo 47, 87-148 Łysomice · NIP 879-265-23-42</span>
+    <span><a href="mailto:biuro@wieczynski.pl">biuro@wieczynski.pl</a> · <a href="{{ '/aktualnosci/' | relative_url }}">Aktualności</a> · <a href="{{ '/polityka-prywatnosci.html' | relative_url }}">Polityka prywatności</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

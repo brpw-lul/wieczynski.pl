@@ -104,6 +104,39 @@ footer a{color:#fff}
 .doc ul{padding-left:22px}
 .doc .back{display:inline-block;margin-bottom:26px;color:var(--navy);font-weight:600;text-decoration:none}
 
+
+/* blog */
+.page-head{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,#163f80);color:#fff;padding:56px 0 60px}
+.page-head .kicker{color:var(--gold-light)}
+.page-head h1{margin:8px 0 12px}
+.page-head .post-date{color:var(--gold-light)}
+.back-light{color:#c9d3e4;text-decoration:none;font-weight:600;font-size:15px}
+.back-light:hover{color:#fff}
+.narrow{max-width:780px}
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.post-card{display:flex;flex-direction:column;gap:8px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:border-color .15s,transform .15s}
+.post-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.post-card h3{font-size:20px;color:var(--navy);letter-spacing:-.01em;line-height:1.25}
+.post-card p{color:var(--muted);font-size:16px;flex:1}
+.post-date{font-size:14px;font-weight:600;color:var(--gold)}
+.more{font-weight:700;color:var(--navy);font-size:15px}
+.note a{color:var(--navy);font-weight:600}
+.article{padding-top:48px;padding-bottom:72px}
+.article h2{font-size:26px;margin:36px 0 12px}
+.article h3{font-size:20px;color:var(--navy);margin:28px 0 10px}
+.article p,.article li{color:#2f3a4d;margin-bottom:14px;font-size:18px;line-height:1.7}
+.article ul,.article ol{padding-left:24px;margin-bottom:14px}
+.article a{color:var(--navy);font-weight:600}
+.article img{border-radius:12px;margin:22px 0;height:auto}
+.article blockquote{border-left:4px solid var(--gold);background:var(--gold-soft);padding:14px 18px;border-radius:0 12px 12px 0;margin:20px 0}
+.article blockquote p{margin:0}
+.article table{width:100%;border-collapse:collapse;margin:20px 0;font-size:16px}
+.article th,.article td{border:1px solid var(--line);padding:10px;text-align:left}
+.post-cta{margin-top:48px;background:var(--gold-soft);border:1px solid #efdfb4;border-radius:var(--radius);padding:26px 28px}
+.post-cta p{font-weight:600;color:var(--navy);margin:0}
+.post-cta .actions{margin-top:16px}
+.btn-light{background:#fff;color:var(--navy);border:1px solid var(--line)}
+
 @media (max-width:900px){
   .hero .wrap{grid-template-columns:1fr;padding-top:56px;padding-bottom:72px}
   .logo-card{max-width:260px;order:-1}

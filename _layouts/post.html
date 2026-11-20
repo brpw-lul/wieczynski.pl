@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<main>
+  <div class="page-head">
+    <div class="wrap narrow">
+      <a href="{{ '/aktualnosci/' | relative_url }}" class="back-light">← Wszystkie aktualności</a>
+      <h1>{{ page.title }}</h1>
+      <p class="post-date">{{ page.date | date: "%d.%m.%Y" }}</p>
+    </div>
+  </div>
+
+  <article class="wrap narrow article">
+    {{ content }}
+
+    <div class="post-cta">
+      <p>Masz pytania o swoją firmę? Napisz lub zadzwoń.</p>
+      <div class="actions">
+        <a href="tel:+48799782411" class="btn btn-navy">799 782 411</a>
+        <a href="mailto:biuro@wieczynski.pl" class="btn btn-light">biuro@wieczynski.pl</a>
+      </div>
+    </div>
+  </article>
+</main>
